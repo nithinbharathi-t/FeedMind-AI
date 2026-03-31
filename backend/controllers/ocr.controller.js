@@ -57,6 +57,8 @@ const processPdfOcrController = async (req, res) => {
             analysis: result.text,
             recordId: newOcrResult._id
         });
+        
+        console.log(`✅ Data successfully saved! Response sent for Record ID: ${newOcrResult._id.toString()}`);
 
     } catch (error) {
         console.error("Controller Error:", error);
